@@ -32,9 +32,9 @@ const app = express();
 // 🌍 CORS Configuration
 // ====================
 const allowedOrigins = [
-  process.env.ADMIN_URL || "http://localhost:3000",
+  process.env.ADMIN_URL || "https://ecom-xzeny-admin.vercel.app/",
   process.env.CLIENT_URL || "http://localhost:3001",
-  "http://localhost:3000",
+  "https://ecom-xzeny-admin.vercel.app/",
   "http://localhost:3001"
 ];
 
