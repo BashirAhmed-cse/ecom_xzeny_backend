@@ -33,9 +33,9 @@ const app = express();
 // ====================
 const allowedOrigins = [
   process.env.ADMIN_URL || "https://ecom-xzeny-admin.vercel.app/",
-  process.env.CLIENT_URL || "http://localhost:3001",
+  process.env.CLIENT_URL || "https://ecom-xzeny-frontend.vercel.app/",
   "https://ecom-xzeny-admin.vercel.app/",
-  "http://localhost:3001"
+  "https://ecom-xzeny-frontend.vercel.app/"
 ];
 
 app.use(
