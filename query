@@ -1,0 +1,24 @@
+CREATE TABLE xzeny_ecommerce.product_seo (
+    seo_id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    meta_title VARCHAR(255),
+    meta_description VARCHAR(500),
+    meta_keywords TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES xzeny_ecommerce.products(product_id) ON DELETE CASCADE,
+    UNIQUE KEY unique_product_id (product_id)
+);
+
+CREATE INDEX idx_product_seo_product_id ON xzeny_ecommerce.product_seo(product_id);
+
+
+Install ngrok in your backend project: npm install -g ngrok
+
+Start your backend: npm run dev (runs on port 3009)
+
+In a new terminal: ngrok http 3009
+
+Copy the ngrok URL (like https://abc-123.ngrok.io)
+
+Add to Clerk Dashboard: https://abc-123.ngrok.io/api/webhooks/clerk
